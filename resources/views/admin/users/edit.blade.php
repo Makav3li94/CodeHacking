@@ -41,6 +41,15 @@
     </div>
     {!! Form::close() !!}
 
+        {{--DELETE FORM ***********************--}}
+
+    {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
+          <div class="form-group">
+                   {!! Form::submit('Delete User',['class'=>'btn btn-danger']) !!}
+          </div>
+    {!! Form::close() !!}
+
+
     </div>
     <div class="col-sm-3">
         @include('includes.form_error')
